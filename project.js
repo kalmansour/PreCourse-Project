@@ -19,8 +19,14 @@
  * sumOdds([3, 7, 8, 15, 2, 1, 13]) -> 39
  */
 function sumOdds(numbers) {
-  // Your code here
+  let total = 0;
+  numbers.forEach(function (number) {
+    if (number % 2 !== 0) total += number;
+  });
+  return total;
 }
+
+// console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
 /**
  * characterCount(string, c):
@@ -35,8 +41,16 @@ function sumOdds(numbers) {
  * Hint: Use string methods to make it case-insensitive
  */
 function characterCount(string, c) {
-  // Your code here
+  let str1 = string.toLowerCase();
+  let str2 = str1.split("");
+  let total = 0;
+  str2.forEach(function (str3) {
+    if (str3 === c) total++;
+  });
+  return total;
 }
+
+// console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * differences(numbers):
@@ -89,8 +103,12 @@ function largestIncrement(numbers) {
  * afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52) -> [14, 56, 601, 777, 888, 999]
  */
 function afterX(numbers, x) {
-  // Your code here
+  console.log(numbers.slice(x));
+  return numbers.slice(x);
 }
+
+console.log(afterX([11, 35, 52, 14, 56, 601, 777, 888, 999], 52));
+console.log(afterX([0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
 /**
  * abbreviate(firstName, lastName):
